@@ -1,54 +1,50 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-            LOGIN FORMS
-        </title>
-        <style>
-            .main {
-                background: linear-gradient(45deg ,blue,black);
-                max-width: 500px;
-                padding: 50px;
-                border-radius: 20%;
-                box-shadow: 0 15px 15px rgb(0, 0, 0, 1);
-                color: #fff;
-                margin-left: 30%;
-                margin-top: 8%;
-            }
-            button {
-                margin-top: 20px;
-                border: none;
+       <style>
+           .main{ 
+               background: linear-gradient(45deg ,#fff,rgb(218, 79, 79));
+               max-width: 20%;
+               padding: 100px;
+               margin-left: 30%;
+               margin-top: 10%;
+               box-shadow: 0 15px 15px rgba(0, 0, 0, 1);
+               border-radius: 10%;
+           }
+           .cl button:hover{
+            background: linear-gradient(35deg,brown,orange);
+                box-shadow: 0 2px 5px 0 rgba(0 , 0 , 0 , 1);
+                background-color: rgb(72, 66, 155);
                 cursor: pointer;
-                display: inline;
-            }
-             button:hover {
-                     background-color: orange;
-                     box-shadow: 0 20px 20px 0 rgb(0, 0, 0, 1);
-            }
-        </style>
+                border-radius: 20%;
+
+           }
+           .cl button{
+               background-color: #fff;
+           }
+       </style>
     </head>
     <body>
         <div class="main">
-            <form>
-                <h2>REGISTATION FORMS</h2>
-                <label>FIRST NAME</label><br>
-                <input type="text" placeholder="first name"><br>
-                <label>LAST NAME</label><br>
-                <input type="text" placeholder="last name"><br>
-                <label>EMAIL</label><br>
-                <input type="text" placeholder="AK123@gmail.com"><br>
-                <label>PASSWARD</label><br>
-                <input type="password" placeholder="passward"><br>
-                <label>MOBILE NUMBER</label><br>
-                <input type="text" placeholder="**********"><br>
-                <label>GENDER</label><br>
-                <select>
-                    <option value="1">male</option>
-                    <option value="2">female</option>
-                    <option value="3">other</option>
-                </select><br>
-                <button class="navbar">SUBMIT</button>
-            </form>
+        <form onsubmit="return login()">
+        <div>
+            <label>UserName : </label>
+            <input id='email' name='email' type="text" required>
         </div>
+        <br>
+        <div>
+            <label>Password : </label>
+            <input id='pswd' name ='pswd' type="password" required>
+        </div>
+        <br>
+        <div class="cl">
+            <button> Submit</button>
+        </div>
+        <div>
+            <p id='result'></p>
+        </div>
+         <script src="./login.js"></script>
+        </form>
+    </div>
     </body>
 </html>
